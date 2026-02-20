@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.RegisterPass.Events;
+﻿namespace EvolutionaryArchitecture.Fitnet.Passes.RegisterPass.Events;
 
 using EvolutionaryArchitecture.Fitnet.Common.Events;
 

@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.MarkPassAsExpired.Events;
+﻿namespace EvolutionaryArchitecture.Fitnet.Passes.MarkPassAsExpired.Events;
 
 using EvolutionaryArchitecture.Fitnet.Common.Events;
 

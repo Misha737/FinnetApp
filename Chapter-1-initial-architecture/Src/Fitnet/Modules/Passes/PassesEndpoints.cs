@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes;
+﻿namespace EvolutionaryArchitecture.Fitnet.Passes;
 
 using GetAllPasses;
 using MarkPassAsExpired;

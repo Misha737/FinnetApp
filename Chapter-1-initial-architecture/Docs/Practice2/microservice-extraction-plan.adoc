@@ -1,0 +1,19 @@
+= Microservice Extraction Plan: Passes Module
+
+If in the future there is a need to separate the Passes module into a separate physical microservice, this is how it will look like:
+
+== API of the Microservice
+The microservice will provide a REST (or gRPC) API for synchronous interaction:
+* `POST /api/passes` - Register a new pass (can be called by the back office or as a reaction to an event).
+* `PATCH /api/passes/{id}/expire` - Mark a pass as invalid.
+* `GET /api/passes` - Get a list of client passes.
+
+== Data Ownership
+* The microservice will have its own physical database (e.g. PostgreSQL).
+* The `Passes` table will be migrated from the current shared database to the new microservice database.
+* Other services will lose any direct access to these tables.
+
+== Communication with Other Modules
+Since the modules currently communicate via `InMemoryEventBus`, when extracting the microservice, the interaction will become asynchronous via an external Message Broker (e.g. RabbitMQ or Kafka).
+* **Consume Events:** The `Passes` service will subscribe to the `ContractSignedEvent` from the broker. Upon receiving this event from the Contracts microservice, it will automatically create a pass.
+* **Publish Events:** When the pass expires, the `Passes` microservice will publish a `PassExpiredEvent` to the message broker (using the Outbox pattern to guarantee delivery). The `Offers` microservice will listen to this event to generate discounts.

@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.RegisterPass;
+﻿namespace EvolutionaryArchitecture.Fitnet.Passes.RegisterPass;
 
 using Contracts.SignContract.Events;
 using Data;

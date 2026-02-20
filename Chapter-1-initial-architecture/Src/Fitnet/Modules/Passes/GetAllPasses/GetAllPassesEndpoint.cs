@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.GetAllPasses;
+﻿namespace EvolutionaryArchitecture.Fitnet.Passes.GetAllPasses;
 
 using Passes;
 using Data.Database;
