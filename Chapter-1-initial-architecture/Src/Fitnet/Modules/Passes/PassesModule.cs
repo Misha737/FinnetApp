@@ -7,6 +7,7 @@ internal static class PassesModule
     internal static IServiceCollection AddPasses(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDatabase(configuration);
+        services.AddScoped<Application.IPassService, Application.PassService>();
 
         return services;
     }
