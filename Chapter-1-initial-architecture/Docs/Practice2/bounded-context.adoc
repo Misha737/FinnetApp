@@ -1,0 +1,24 @@
+= Bounded Context: Passes Module
+
+== Module Name
+**Passes**
+
+== Module Responsibilities
+* **What the module does:**
+- Responsible for the lifecycle of a client's fitness club pass.
+- Registers a new pass (activates the subscription) after the contract has been successfully signed.
+- Controls the validity period of the pass (start and end dates).
+- Provides the ability to mark a pass as invalid (expired).
+- Provides a list of existing passes for viewing.
+
+* **What the module is NOT responsible for:**
+- Does not deal with the legal aspects of the agreements (this is the task of the Contracts module).
+- Does not create marketing discounts or offers (this is the task of the Offers module).
+- Does not deal with billing or payment processing.
+
+== Data Ownership
+The module fully owns the data related to passes. The main entity: `Pass`.
+* `Id` (Unique pass identifier)
+* `CustomerId` (Customer ID to which the pass belongs)
+* Validity period: `From` (Start date) and `To` (End date)
+The module manages the `Passes` database schema and no other modules have the right to directly read or write to the passes table.
