@@ -1,12 +1,14 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes;
+﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes;
 
-using Data.Database;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
 
 internal static class PassesModule
 {
     internal static IServiceCollection AddPasses(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDatabase(configuration);
+        services.AddScoped<IPassRepository, PassRepository>();
 
         return services;
     }

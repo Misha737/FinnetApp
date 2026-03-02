@@ -1,7 +1,5 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes;
+﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Presentation;
 
-using GetAllPasses;
-using MarkPassAsExpired;
 
 internal static class PassesEndpoints
 {
