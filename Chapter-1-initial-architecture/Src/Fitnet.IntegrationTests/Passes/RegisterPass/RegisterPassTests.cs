@@ -1,10 +1,11 @@
-namespace EvolutionaryArchitecture.Fitnet.IntegrationTests.Passes.RegisterPass;
+﻿namespace EvolutionaryArchitecture.Fitnet.IntegrationTests.Passes.RegisterPass;
 
 using Common.TestEngine.Configuration;
 using Common.TestEngine.IntegrationEvents.Handlers;
 using Fitnet.Contracts.SignContract.Events;
 using Fitnet.Passes.RegisterPass.Events;
 using EvolutionaryArchitecture.Fitnet.Common.Events.EventBus;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Application;
 
 public sealed class RegisterPassTests : IClassFixture<WebApplicationFactory<Program>>, IClassFixture<DatabaseContainer>, IAsyncLifetime
 {

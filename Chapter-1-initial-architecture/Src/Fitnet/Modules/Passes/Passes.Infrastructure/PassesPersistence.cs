@@ -1,5 +1,6 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.Data.Database;
+﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
 
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
 using Microsoft.EntityFrameworkCore;
 
 internal sealed class PassesPersistence(DbContextOptions<PassesPersistence> options) : DbContext(options)

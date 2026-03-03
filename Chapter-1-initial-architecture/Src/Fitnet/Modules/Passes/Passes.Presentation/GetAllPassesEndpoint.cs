@@ -1,8 +1,8 @@
-namespace EvolutionaryArchitecture.Fitnet.Passes.GetAllPasses;
+﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Presentation;
 
-using Passes;
-using Data.Database;
 using Microsoft.EntityFrameworkCore;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
 
 internal static class GetAllPassesEndpoint
 {

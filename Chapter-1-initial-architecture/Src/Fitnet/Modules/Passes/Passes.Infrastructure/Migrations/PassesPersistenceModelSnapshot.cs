@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using EvolutionaryArchitecture.Fitnet.Passes.Data.Database;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
 
 #nullable disable
 
