@@ -33,12 +33,5 @@
         <Link>Contracts.http</Link>
       </Content>
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Passes\Data\Database\Migrations\" />
-      <Folder Include="Passes\GetAllPasses\" />
-      <Folder Include="Passes\MarkPassAsExpired\Events\" />
-      <Folder Include="Passes\RegisterPass\Events\" />
-    </ItemGroup>
   
 </Project>
