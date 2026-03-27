@@ -13,8 +13,10 @@ internal sealed class ContractSignedEventHandler(
     public async Task Handle(ContractSignedEvent @event, CancellationToken cancellationToken)
     {
         var pass = Pass.Register(@event.ContractCustomerId, @event.SignedAt, @event.ExpireAt);
+        // For test purpose
+        var transfer = Transfer.Register("some_type", "Some message", DateTime.UtcNow);
 
-        await passRepository.AddAsync(pass, cancellationToken);
+        await passRepository.AddAsync(pass, transfer, cancellationToken);
         await passRepository.SaveChangesAsync(cancellationToken);
 
         var passRegisteredEvent = PassRegisteredEvent.Create(pass.Id);

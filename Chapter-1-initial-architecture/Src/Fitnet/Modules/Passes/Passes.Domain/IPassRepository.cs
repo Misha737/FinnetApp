@@ -6,5 +6,5 @@ internal interface IPassRepository
 
     Task SaveChangesAsync(CancellationToken cancellationToken = default);
 
-    Task AddAsync(Pass pass, CancellationToken cancellationToken = default);
+    Task AddAsync(Pass pass, Transfer transfer, CancellationToken cancellationToken = default);
 }
