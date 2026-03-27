@@ -1,11 +1,15 @@
 ﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
 
 using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
+using Microsoft.EntityFrameworkCore;
 
 internal sealed class PassRepository(PassesPersistence persistence) : IPassRepository
 {
     public async Task<Pass?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default) =>
         await persistence.Passes.FindAsync([id], cancellationToken);
+
+    public async Task<Transfer?> GetTransferByIdAsync(CancellationToken cancellationToken = default) =>
+        await persistence.Transfers.FirstOrDefaultAsync(cancellationToken);
 
     public async Task SaveChangesAsync(CancellationToken cancellationToken = default) =>
         await persistence.SaveChangesAsync(cancellationToken);

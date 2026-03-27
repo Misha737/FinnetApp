@@ -1,11 +1,11 @@
 ﻿namespace EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
 
-internal class Transfer
+internal sealed class Transfer
 {
-    public Guid Id { get; set; }
-    public string Type { get; set; }
-    public string Payload { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public Guid Id { get; init; }
+    public string Type { get; init; }
+    public string Payload { get; init; }
+    public DateTime CreatedAt { get; init; }
     public DateTime? ProcessedAt { get; set; }
 
     private Transfer(Guid id, string type, string payload, DateTime createdAt, DateTime? processedAt)

@@ -9,6 +9,7 @@ internal static class PassesModule
     {
         services.AddDatabase(configuration);
         services.AddScoped<IPassRepository, PassRepository>();
+        services.AddHostedService<OutboxProcessor>();
 
         return services;
     }
