@@ -2,6 +2,7 @@
 
 using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Domain;
 using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure;
+using EvolutionaryArchitecture.Fitnet.Modules.Passes.Passes.Infrastructure.Sagas;
 
 internal static class PassesModule
 {
@@ -9,6 +10,7 @@ internal static class PassesModule
     {
         services.AddDatabase(configuration);
         services.AddScoped<IPassRepository, PassRepository>();
+        services.AddScoped<ISagaRepository, SagaRepository>();
         services.AddHostedService<OutboxProcessor>();
 
         return services;

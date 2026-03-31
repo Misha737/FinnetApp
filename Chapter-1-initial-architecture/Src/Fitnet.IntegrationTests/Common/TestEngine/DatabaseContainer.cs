@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet.IntegrationTests.Common.TestEngine;
+﻿namespace EvolutionaryArchitecture.Fitnet.IntegrationTests.Common.TestEngine;
 
 using Testcontainers.PostgreSql;
 
@@ -19,7 +19,7 @@ public sealed class DatabaseContainer : IAsyncLifetime
             .WithPassword(Password)
             .Build();
 
-        await _container!.StartAsync();
+        await _container.StartAsync();
 
         ConnectionString = _container.GetConnectionString();
     }

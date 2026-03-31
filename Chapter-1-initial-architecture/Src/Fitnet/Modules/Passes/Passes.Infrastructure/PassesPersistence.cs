@@ -9,6 +9,7 @@ internal sealed class PassesPersistence(DbContextOptions<PassesPersistence> opti
 
     public DbSet<Pass> Passes => Set<Pass>();
     public DbSet<Transfer> Transfers => Set<Transfer>();
+    public DbSet<PassRegistrationSaga> Sagas => Set<PassRegistrationSaga>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
