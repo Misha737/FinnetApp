@@ -31,6 +31,11 @@ internal sealed class PassRegistrationSaga
 
     internal void MarkAsCompleted(DateTime updatedAt)
     {
+        if (Status == SagaStatus.Completed)
+        {
+            return;
+        }
+
         if (Status != SagaStatus.Started)
         {
             throw new InvalidOperationException($"Cannot complete saga in state {Status}");

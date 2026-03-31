@@ -16,5 +16,6 @@ internal sealed class PassesPersistence(DbContextOptions<PassesPersistence> opti
         modelBuilder.HasDefaultSchema(Schema);
         modelBuilder.ApplyConfiguration(new PassEntityConfiguration());
         modelBuilder.ApplyConfiguration(new TransferEntityConfiguration());
+        modelBuilder.ApplyConfiguration(new PassRegistrationSagaConfiguration());
     }
 }
